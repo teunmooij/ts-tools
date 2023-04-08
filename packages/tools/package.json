@@ -1,5 +1,5 @@
 {
-  "name": "ts-tools",
+  "name": "ts-powertools",
   "version": "0.0.1",
   "description": "Collection of typescript tools",
   "main": "dist/index.js",
