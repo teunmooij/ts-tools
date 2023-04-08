@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "ts-types": "^0.0.1"
+    "ts-powertypes": "^0.0.1"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
@@ -32,7 +32,7 @@
     "rimraf": "^4.4.0",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "ts-types": "^0.0.1",
+    "ts-powertypes": "^0.0.1",
     "typescript": "^5.0.2"
   },
   "repository": {
