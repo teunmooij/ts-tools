@@ -1,0 +1,17 @@
+name: Build and publish ts-types
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/types/**"
+
+jobs:
+  build_and_publish:
+    uses: ./.github/workflows/publish.yml
+    with:
+      workspace: packages/types
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

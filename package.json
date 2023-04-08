@@ -1,0 +1,19 @@
+{
+  "name": "ts-tools",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:coverage": "npm run test:coverage --workspaces --if-present"
+  },
+  "workspaces": [
+    "packages/types",
+    "packages/tools"
+  ],
+  "lint-staged": {
+    "**/*.{js,ts}": "eslint --cache --fix",
+    "**/*.{js,ts,md}": "prettier --write"
+  }
+}
