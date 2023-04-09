@@ -8,7 +8,7 @@
 
 Collection of typescript types
 
-This initial version is just a placeholder. More will follow soon.
+This package is work in progress and semantic versioning is not yet guaranteed. If you use this package, please make sure to set explcit version number in your package json.
 
 ## Version history
 

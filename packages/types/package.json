@@ -1,10 +1,11 @@
 {
   "name": "ts-powertypes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of typescript types",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "build": "rimraf dist && tsc --sourceMap false",
+    "build": "tsc --noEmit",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --quiet --fix",
     "test": "jest -c jest.config.ts",
