@@ -2,7 +2,6 @@ import type { Primitive } from './basic';
 
 type TemplatePrimitive = Exclude<Primitive, symbol>;
 
-
 export type Split<
   TValue extends string,
   TSeparator extends string = '.',
@@ -14,6 +13,6 @@ export type Split<
 
 export type Join<T, TSeparator extends string = ''> = T extends [infer first, ...infer rest]
   ? [] extends rest
-    ? first & TemplatePrimitive
+    ? `${first & TemplatePrimitive}`
     : `${first & TemplatePrimitive}${TSeparator}${Join<rest, TSeparator> & TemplatePrimitive}`
   : never;

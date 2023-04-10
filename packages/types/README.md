@@ -58,6 +58,8 @@ type FlatBook = Flatten<Book>;
 - `Join` joins a string constant on a given separator
 
 - `Flatten` flattens an object structure
+- `ObjectPaths` union of all key paths of an object
+- `ValuesAtPath` value type of an object at a given patch
 
 ## Version history
 

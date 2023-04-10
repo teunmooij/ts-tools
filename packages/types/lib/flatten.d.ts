@@ -1,12 +1,6 @@
 import type { Key } from './basic';
 import type { ValueOf } from './object';
-import type { Split } from './template-strings';
-
-export type NestedKeys<TObject, TSeparator extends string = '.'> = TObject extends object
-  ?
-      | (keyof TObject & string)
-      | ValueOf<{ [K in keyof TObject & string]: `${K}${TSeparator}${NestedKeys<TObject[K], TSeparator>}` }>
-  : never;
+import type { Join, Split } from './template-strings';
 
 type Unwrap<T> = T extends `${number}` ? (`${number}` extends T ? number : T) : T;
 
@@ -20,18 +14,23 @@ export type ValueAtPath<TSource, TPath extends Key[]> = TPath extends []
     : never
   : never;
 
-export type FlattenKeys<TObject, TSeparator extends string = '.'> = TObject extends object
+export type ObjectPaths<TObject> = TObject extends object
   ?
-      | ValueOf<{ [K in keyof TObject & string]: TObject[K] extends object ? never : K }>
+      | ValueOf<{ [K in keyof TObject & string]: TObject[K] extends object ? never : [K] }>
       | ValueOf<{
           [K in keyof TObject & string]: TObject[K] extends ReadonlyArray<infer E>
             ? E extends object
-              ? `${K}${TSeparator}${number}${TSeparator}${FlattenKeys<E, TSeparator>}`
-              : `${K}${TSeparator}${number}`
-            : `${K}${TSeparator}${FlattenKeys<TObject[K], TSeparator>}`;
+              ? [K, number, ...ObjectPaths<E>]
+              : [K, number]
+            : [K, ...ObjectPaths<TObject[K]>];
         }>
   : never;
 
+type PathToString<T, TSeparator extends string> = T extends any ? Join<T, TSeparator> : never;
+
+/**
+ * Flattens an object structure
+ */
 export type Flatten<TObject, TSeparator extends string = '.'> = {
-  [K in FlattenKeys<TObject, TSeparator>]: ValueAtPath<TObject, Split<K, TSeparator>>;
+  [K in PathToString<ObjectPaths<TObject>, TSeparator>]: ValueAtPath<TObject, Split<K, TSeparator>>;
 };
