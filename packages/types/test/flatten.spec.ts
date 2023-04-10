@@ -34,4 +34,13 @@ describe('flatten tests', () => {
 
     expectTypes<Actual, Expected>().toBeEqual();
   });
+
+  it('flattens an array', () => {
+    type Given = { foo: string[]; bar: { baz: string }[] };
+    type Expected = { [x: `foo.${number}`]: string; [x: `foo.${number}.baz`]: string };
+
+    type Actual = Flatten<Given>;
+
+    expectTypes<Actual, Expected>().toBeEqual();
+  });
 });

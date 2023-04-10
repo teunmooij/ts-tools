@@ -1,6 +1,6 @@
 {
   "name": "ts-powertools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of typescript tools",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "ts-powertypes": "^0.0.1"
+    "ts-powertypes": "^0.0.3"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
@@ -41,8 +41,11 @@
   },
   "keywords": [
     "typescript",
+    "ts",
     "tools",
-    "utils"
+    "utils",
+    "utility",
+    "types"
   ],
   "author": "Teun Mooij",
   "license": "MIT",

@@ -1,4 +1,4 @@
-import { Split, SplitFirst } from '..';
+import { Split, Join } from '..';
 import { expectTypes } from './test-utils';
 
 describe('template strings tests', () => {
@@ -38,11 +38,29 @@ describe('template strings tests', () => {
     expectTypes<Actual, Expected>().toBeEqual();
   });
 
-  it('splits on the first occurence of the separator', () => {
-    type Given = 'abc;de.f;ghi';
-    type Expected = ['abc', 'de.f;ghi'];
+  it('splits open ended parts', () => {
+    type Given = `abc.${string}.def`;
+    type Expected = ['abc', string, 'def'];
 
-    type Actual = SplitFirst<Given, ';'>;
+    type Actual = Split<Given>;
+
+    expectTypes<Actual, Expected>().toBeEqual();
+  });
+
+  it('joins a string tuple', () => {
+    type Given = ['abc', 'def', 'ghi'];
+    type Expected = 'abcdefghi';
+
+    type Actual = Join<Given>;
+
+    expectTypes<Actual, Expected>().toBeEqual();
+  });
+
+  it('joins a string tuple with a given separator', () => {
+    type Given = ['abc', 'def', 'ghi'];
+    type Expected = 'abc.def.ghi';
+
+    type Actual = Join<Given, '.'>;
 
     expectTypes<Actual, Expected>().toBeEqual();
   });

@@ -1,1 +1,1 @@
-console.log('Work in progress');
+export { objectEntries, objectKeys, objectValues } from './object';

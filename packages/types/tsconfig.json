@@ -2,8 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true,
-    "rootDir": "."
+    "skipLibCheck": false,
+    "skipDefaultLibCheck": false
   },
-  "include": ["lib/**/*", "test/test-utils.ts", "index.js", "index.d.ts"],
-  "exclude": ["node_modules", "dist", "test", "./*.[js|ts]"]
+  "include": ["test/test-utils.ts", "lib/**/*", "index.js", "index.d.ts"]
 }

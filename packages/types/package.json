@@ -1,6 +1,6 @@
 {
   "name": "ts-powertypes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collection of typescript types",
   "main": "index.js",
   "types": "index.d.ts",
@@ -38,8 +38,11 @@
   },
   "keywords": [
     "typescript",
+    "ts",
     "tools",
-    "utils"
+    "utils",
+    "utility",
+    "types"
   ],
   "author": "Teun Mooij",
   "license": "MIT",

@@ -6,9 +6,23 @@
 
 # ts-powertools
 
-Collection of typescript tools
+Collection of strongly typed tools designed to provide type safe solutions for common problems.
 
-This initial version is just a placeholder. More will follow soon.
+This package is work in progress and semantic versioning is not yet guaranteed. If you use this package, please make sure to set explcit version number in your package json.
+
+## Install
+
+```shell
+npm install ts-powertools
+```
+
+## Api
+
+### Object types
+
+- `objectKeys` strongly typed version of `Object.keys`
+- `objectValues` strongly typed version of `Object.values`
+- `objectEntries` strongly typed version of `Object.entries`
 
 ## Version history
 
