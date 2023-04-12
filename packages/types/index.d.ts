@@ -1,3 +1,4 @@
+export type { IsAny } from './lib/any';
 export type { Key, Primitive } from './lib/basic';
 export type { ElementType } from './lib/element';
 export type { KeyOf, ObjectEntries, ObjectKeys, ObjectValues, ValueOf } from './lib/object';

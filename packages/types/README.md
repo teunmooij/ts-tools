@@ -61,6 +61,8 @@ type FlatBook = Flatten<Book>;
 - `ObjectPaths` union of all key paths of an object
 - `ValuesAtPath` value type of an object at a given patch
 
+- `IsAny` evaluates to `true` if the given type is `any`, else `false`
+
 ## Version history
 
 See [changelog](./CHANGELOG.md)

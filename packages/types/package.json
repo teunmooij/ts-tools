@@ -1,6 +1,6 @@
 {
   "name": "ts-powertypes",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of typescript types",
   "main": "index.js",
   "types": "index.d.ts",
