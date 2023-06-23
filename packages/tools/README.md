@@ -23,6 +23,7 @@ npm install ts-powertools
 - `objectKeys` strongly typed version of `Object.keys`
 - `objectValues` strongly typed version of `Object.values`
 - `objectEntries` strongly typed version of `Object.entries`
+- `map` maps an object
 
 ## Version history
 
