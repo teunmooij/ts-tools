@@ -36,3 +36,5 @@ export const expectTypes = <TActual, TExpected>(): Matcher<TExpected, TActual> =
       /* irrelevant */
     },
   } as Matcher<TExpected, TActual>);
+
+export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));

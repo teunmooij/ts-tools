@@ -1,6 +1,6 @@
 {
   "name": "ts-powertools",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of typescript tools",
   "main": "dist/index.js",
   "scripts": {

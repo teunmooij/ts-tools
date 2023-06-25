@@ -24,6 +24,8 @@ npm install ts-powertools
 - `objectValues` strongly typed version of `Object.values`
 - `objectEntries` strongly typed version of `Object.entries`
 - `map` maps an object
+- `mapAsync` maps an object asynchronously
+- `reduceAsync` reduces an array asynchronously
 
 ## Version history
 
